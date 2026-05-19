@@ -297,12 +297,13 @@ body {
 }
 
 .gifts__like{
+    position: absolute;
     width: 28px;
     height: 28px;
     background: #DC3845;
+    bottom: 0;
+    right: 0;
 }
-
-
 
 /* gift section*/
 .gift{
