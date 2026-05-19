@@ -22,10 +22,25 @@ img {
     display: block;
 }
 
+:root{
+    --bg: #fff;
+    --text: #000;
+    --list: #2f2223;
+}
+
+body.dark{
+    --bg: #251819;
+    --text: #fff;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background: #f5f5f5;
+    height: 100vh;
+    transition: background 0.3s linear;
+    background-color: var(--bg);
 }
 
 .container {
@@ -43,7 +58,7 @@ body {
 
 .header_wrapper {
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
 .header_logo {
@@ -64,24 +79,35 @@ body {
     display: flex;
     gap: 48px;
     margin-right: 49px;
+    color: var(--list);
 }
 
 .nav_link {
-    color: #000;
+    color: var(--text);
 }
 
 .dark-mode {
     width: 20px;
     height: 29px;
-    background-image: url('/assets/images/icons/moon.svg');
-    background-size: contain;
+    background-image: url('./moon.svg');
     background-repeat: no-repeat;
     background-position: center;
     border: none;
     background-color: transparent;
 }
 
+body.dark .toggle {
+    background-image: url('./moon-white.svg');
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* hero section */
+.Logo{
+    color: var(--text);
+}
+
 .hero {
     padding-top: 64px;
     padding-bottom: 56px;
@@ -108,6 +134,7 @@ body {
     line-height: 140%;
     letter-spacing: 0%;
     margin-bottom: 16px;
+    color: var(--text);
 }
 
 .hero__desc {
@@ -115,6 +142,7 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 48px;
+    color: var(--text);
 }
 
 .hero__link {
@@ -128,7 +156,7 @@ body {
     font-weight: 500;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #fff;
+    color: var(--text);
 }
 
 /* giving section */
@@ -140,6 +168,7 @@ body {
 .giving__title-wrapper {
     width: 205px;
     margin: 0 auto;
+    color: var(--text);
 }
 
 .giving__title {
@@ -148,10 +177,12 @@ body {
     line-height: 100%;
     text-align: center;
     margin-bottom: 56px;
+    color: var(--text);
 }
 
 .giving__list {
     display: flex;
+    color: var(--list);
     justify-content: space-between;
 }
 
@@ -172,7 +203,8 @@ body {
     letter-spacing: 0%;
     text-align: center;
     margin-bottom: 8px;
-
+    color: var(--text);
+    
 }
 
 .giving__subdesk{
@@ -180,6 +212,7 @@ body {
     line-height: 1;
     letter-spacing: 0%;
     text-align: center;
+    color: var(--text);
 }
 
 /* celebrate section */
@@ -204,7 +237,7 @@ body {
 
 .celebrate__content{
     width: 372px;
-
+    
 }
 
 .celebrate__title{
@@ -214,6 +247,7 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 24px;
+    color: var(--text);
 }
 
 .celebrate__desc{
@@ -221,17 +255,89 @@ body {
     letter-spacing: 0%;
     margin-bottom: 40px;
     color: #5E5658;
+    color: var(--text);
 }
 
 .celebrate__link{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--text);
     width: 215px;
     height: 56px;
     border-radius: 64px;
     background-color: #DC3845;
+}
+
+/* gift section*/
+.gift{
+    padding-top: 72px;
+    padding-bottom: 32px;
+}
+
+.gift__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 64px;
+    color: var(--text);
+}
+
+.gift__list{
+    width: 680px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    color: var(--list);
+}
+
+.gift__item{
+    position: relative;
+    padding: 32px 40px 24px 24px;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 24px 0px #301D1E1A;
+}
+
+.gift__img{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 16px;
+}
+
+.gift__price{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 4px;
+}
+
+.gift__subtitle{
+    font-weight: 500;
+    font-style: Medium;
+    font-style: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #5D5656;
+    color: var(--text);
+}
+
+.gift__like{
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('./heart2.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
 }
 
 /* gifts */
@@ -247,12 +353,14 @@ body {
     letter-spacing: 0%;
     text-align: center;
     margin-bottom: 64px;
+    color: var(--text);
 }
 
 .gifts__list {
     display: flex;
     justify-content: center;
     gap: 64px;
+    color: var(--list);
 }
 
 .gifts__item {
@@ -286,6 +394,7 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 4px;
+    color: var(--text);
 }
 
 .gifts__subtitle{
@@ -294,6 +403,7 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     color: #5D5656;
+    color: var(--text);
 }
 
 .gifts__like{
@@ -303,74 +413,6 @@ body {
     background: #DC3845;
     bottom: 0;
     right: 0;
-}
-
-/* gift section*/
-.gift{
-    padding-top: 72px;
-    padding-bottom: 32px;
-}
-
-.gift__title{
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    margin-bottom: 64px;
-}
-
-.gift__list{
-    width: 680px;
-    margin: 0 auto;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.gift__item{
-    position: relative;
-    padding: 32px 40px 24px 24px;
-    width: 200px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 24px 0px #301D1E1A;
-}
-
-.gift__img{
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 16px;
-}
-
-.gift__price{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    margin-bottom: 4px;
-}
-
-.gift__subtitle{
-    font-weight: 500;
-    font-style: Medium;
-    font-style: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #5D5656;
-}
-
-.gift__like{
-    top: 20px;
-    right: 20px;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url();
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    background-color: transparent;
 }
 
 /* contact section */
@@ -398,7 +440,7 @@ body {
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #fff;
+    color: var(--text);
     margin-bottom: 24px;
 }
 
@@ -420,6 +462,6 @@ body {
     height: 55px;
     border-radius: 64px;
     background-color: #282525;
-    color: #fff;
+    color: var(--text);
     border: none;
 }
